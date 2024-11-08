@@ -43,13 +43,22 @@ The forty riders reached a cliff. In the bright sunlight Ali Baba could see that
   - ...
 
 ### Một số ví dụ khác
+- Trấn Thành đánh nhau với quái vật:
+    
+    ```a <TOK> person is fighting a monster``` ![](./img/image.webp)
+
+- Trấn Thành lái xe máy
+    
+    ```a <TOK> person is riding a motorbike``` 
+    
+    ![](./img/riding.png)
+
 - Sinh ảnh Trấn Thành khóc, với model finetune và SDXL:
   - ```a <TOK> person is crying``` (SDXL x LoRa)
 ![](./img/crying.png)
   - ```Tran Thanh is crying``` (SDXL Base)
 ![](./img/crying.jpg)
-- Trấn Thành đánh nhau với quái vật:
-    - ```a <TOK> person is fighting a monster``` ![](./img/image.webp)
+
 - ...
 ## Sử dụng
 - Train model cho bộ dataset riêng (cần khoảng 20 mẫu): [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
