@@ -1,4 +1,5 @@
 # Create your story with Trấn Thành!!!
+(Hiện tại chưa hoàn thiện các phần Demo)
 ## Giới thiệu
 Content cho trẻ em là "vùng đất vàng" để khai thác. Nắm bắt được tâm lý thích sự quen thuộc của trẻ nhỏ, repo này giúp bạn tạo ra ảnh dựa trên những mẫu có sẵn, ví dụ như ảnh Trấn Thành (hoặc chính bạn) đang đánh nhau với quái vật chẳng hạn:
 
