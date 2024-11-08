@@ -1,7 +1,7 @@
 # Create your story with Trấn Thành!!!
-(Hiện tại chưa hoàn thiện các phần Demo)
 ## Giới thiệu
-Content cho trẻ em là "vùng đất vàng" để khai thác. Nắm bắt được tâm lý thích sự quen thuộc của trẻ nhỏ, repo này giúp bạn tạo ra ảnh dựa trên những mẫu có sẵn, ví dụ như ảnh Trấn Thành (hoặc chính bạn) đang đánh nhau với quái vật chẳng hạn:
+Content cho trẻ em là "vùng đất vàng" để khai thác. Nắm bắt được tâm lý thích sự quen thuộc của trẻ nhỏ, repo này giúp bạn tạo ra ảnh dựa trên những mẫu có sẵn, ví dụ như ảnh Trấn Thành (hoặc chính bạn) đang bay:
+![](./img/flying.png)
 
 ## Bài toán
 - Stable Diffusion là một mô hình sinh ảnh mạnh mẽ cho các bài toán tổng quát nhưng thường gặp khó khăn trong việc tạo ra ảnh cho các miền tri thức đặc thù hoặc mang tính cá nhân hóa cao.
@@ -28,6 +28,28 @@ Sử dụng DreamBooth, mô hình có khả năng tái tạo các yếu tố qua
 Chi tiết hơn về phương pháp có thể xem tại phần Tài liệu tham khảo.
 
 ## Demo
+### Alibaba
+- Hãy đến với câu truyện cổ tích "Alibaba và 40 tên cướp" cùng Trấn Thành:
+  >Ali Baba was in the forest getting firewood.
+He heard a clatter of hooves on the path. He was afraid. He climbed the nearest tree and hid.
+He peeked out and saw forty men on horseback.
+The forty riders reached a cliff. In the bright sunlight Ali Baba could see that their saddlebags were full of glistening and sparkling gold.“Those bags are full of stolen treasure!” he thought...
+
+- Sử dụng các câu prompt sau, mô hình sẽ sinh ra ảnh tương ứng: 
+  - ```a <TOK> person in the forest getting firewood```
+![](./img/2.png)
+  - ```a <TOK> person is hiding in a tree, watching men on horseback with treasure.``` 
+![](./img/1.png)
+  - ...
+
+### Một số ví dụ khác
+- Sinh ảnh Trấn Thành khóc, với model finetune và SDXL:
+  - ```a <TOK> person is crying``` (SDXL x LoRa)
+![](./img/crying.png)
+  - Tran Thanh is crying (SDXL Base)
+![](./img/crying.jpg)
+- ...
+## Sử dụng
 - Cách train model cho dataset riêng: [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
 - Cách load model đã huấn luyện, deploy bằng gradio: [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
 
@@ -43,4 +65,3 @@ Phương pháp này giúp tăng sự đa dạng của mô hình.
 - [LoRa](https://arxiv.org/abs/2106.09685)
 - [DreamBooth](https://dreambooth.github.io/)
 - [DreamBooth and LoRa for LLM, Stable Diffusion](https://huggingface.co/docs/diffusers/v0.19.3/training/lora#dreambooth)
-- 
