@@ -20,7 +20,7 @@ LoRa (Low-Rank Adaptation) vốn được sinh ra để finetune cho các mô h�
 
 Với Stable Diffusion, Cross Attention được dùng để liên kết thông tin từ prompt, giúp mô hình sinh ảnh theo đúng yêu cầu. Prompt đóng vai trò như Query, trong khi Representation của ảnh trong Latent Space là Key và Value.
 
-Từ (các quan sát)[https://arxiv.org/abs/2012.13255], LoRa tận dụng phép phân rã ma trận (matrix decomposition) để tối ưu lượng tham số cần huấn luyện trong cơ chế Cross Attention. 
+Từ [các quan sát](https://arxiv.org/abs/2012.13255) rằng các mô hình LLM, mở rộng ra là Cross Attention nói chung thường có rank thấp, LoRa tận dụng phép phân rã ma trận (matrix decomposition) để tối ưu lượng tham số cần huấn luyện trong cơ chế Cross Attention. 
 
 ### DreamBooth
 DreamBooth là một phương pháp cá nhân hóa mô hình Diffusion bằng cách huấn luyện nó với một lượng dữ liệu hình ảnh ít, giúp tái hiện một nhân vật hoặc phong cách cụ thể trong ảnh đầu ra.
@@ -46,12 +46,14 @@ The forty riders reached a cliff. In the bright sunlight Ali Baba could see that
 - Sinh ảnh Trấn Thành khóc, với model finetune và SDXL:
   - ```a <TOK> person is crying``` (SDXL x LoRa)
 ![](./img/crying.png)
-  - Tran Thanh is crying (SDXL Base)
+  - ```Tran Thanh is crying``` (SDXL Base)
 ![](./img/crying.jpg)
+- Trấn Thành đánh nhau với quái vật:
+    - ```a <TOK> person is fighting a monster``` ![](./img/image.webp)
 - ...
 ## Sử dụng
-- Cách train model cho dataset riêng: [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
-- Cách load model đã huấn luyện, deploy bằng gradio: [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
+- Train model cho bộ dataset riêng (cần khoảng 20 mẫu): [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
+- Load model đã huấn luyện, deploy bằng gradio: [load_trained.ipynb](https://github.com/ttb06/diffusers/blob/main/load_trained.ipynb)
 
 ## Hướng phát triển
 - MergeLoRa: Có thể train các Adapter LoRa với từng usecase khác nhau (ví dụ: 1 LoRa cho ảnh Trấn Thành, và 1 LoRa cho style hoạt hình) và merge lại. 
